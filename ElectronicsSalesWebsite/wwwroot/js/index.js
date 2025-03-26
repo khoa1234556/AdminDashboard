@@ -18,6 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
             link.classList.add("active");
         }
     });
+
+    if (localStorage.getItem('leftNavHidden') === 'true') {
+        ishidden(true, true)
+    } else {
+        ishidden(false, true)
+    }
+    
 });
 
 // thu phóng thanh nav khi nhấn nút
@@ -25,16 +32,46 @@ document.getElementById("closeMenu").addEventListener("click", function () {
     let icon = document.getElementById("icon");
     let leftPane = document.getElementById('leftNav');
     if (icon.classList.contains("fa-bars")) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-times", "rotate");
-        leftPane.classList.remove('hidden');
+        ishidden(true)
     } else {
-        icon.classList.remove("fa-times", "rotate");
-        icon.classList.add("fa-bars");
-        
-        leftPane.classList.add('hidden');
+        ishidden(false)
     }
 });
+function ishidden(a,b) {
+    let icon = document.getElementById("icon");
+    let leftPane = document.getElementById('leftNav');
+    leftPane.classList.add('trantision-x');
+    if (a) {
+        leftPane.classList.remove('hidden');
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-left-long", "rotate");
+        localStorage.setItem('leftNavHidden', 'true');
+    } else {
+        leftPane.classList.add('hidden');
+        icon.classList.remove("fa-left-long", "rotate");
+        icon.classList.add("fa-bars");
+        localStorage.setItem('leftNavHidden', 'false');
+    }
+    if (b) {
+        leftPane.classList.remove('trantision-x');
+    }
+    console.log(localStorage.getItem('leftNavHidden'))
+}
+
+window.addEventListener('resize', function () {
+    const element = document.getElementById('leftNav');
+    let icon = document.getElementById("icon");
+    if (window.innerWidth < 576) {// Thêm class 'hidden' khi <576px
+        ishidden(false)
+    }else
+    if (element.classList.contains('hidden')) {
+        ishidden(false)
+        
+    } else {
+        ishidden(true)
+    }
+});
+
 
 // đổi trạng thái theme khi nhấn nút
 function toggleTheme() {

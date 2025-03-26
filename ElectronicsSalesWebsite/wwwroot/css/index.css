@@ -8,6 +8,8 @@
     --bs-tertiary-bg: #a58fff;
     --bs-secondary-bg-hover: #ebfcf7;
     --bs-tertiary-bg-hover: #baaafb;
+    --bs-hover: rgba(255,255,255,0.3);
+    --bs-active: rgba(0,0,150,0.2);
     --btn-color: #151515;
     --bs-primary: #0d6efd;
     --bs-secondary: #6c757d;
@@ -49,9 +51,9 @@ header {
 }
     header > div {
         padding-left: 1rem;
-        width: 17rem;
+        width: auto;
         align-content: center;
-        text-align: center;
+        text-align: start;
     }
 /*---  LEFT ------*/
 img#avatar {
@@ -87,7 +89,7 @@ img#avatar {
     position: absolute;
     inset: 0;
     height: 100%;
-    transform: translateX(-100%);
+    transform: translateX(-50%);
 }
 
 .theme__icon,
@@ -281,7 +283,7 @@ img#avatar {
     border-radius: 0.2rem;
     z-index: 6;
     transform: scale(0.9);
-    animation: down 1s ease forwards;
+    animation: down 0.3s forwards;
 }
 @keyframes down {
     0% {
@@ -301,7 +303,7 @@ img#avatar {
     font-weight:620
 }
 #sub-info ul li{
-    padding:0.2rem;
+    padding:0.4rem;
 }
 
 #sub-info ul li:hover {
@@ -375,9 +377,6 @@ main{
     transition: transform 0.3s ease-in-out;
 }
 
-.rotate {
-    transform: rotate(180deg);
-}
 
 .row {
     --bs-gutter-x: 0;
@@ -395,10 +394,13 @@ main{
     scroll-snap-type: y mandatory;
     background-color: var(--bs-secondary-bg);
     padding: 1rem;
-    transition: width 0.3s ease;
+    
     border-radius: 0.4rem;
 }
-
+.trantision-x {
+    transition: width 0.3s ease;
+ 
+}
 header a {
     color: var(--bs-body-color);
     text-decoration: none;
@@ -417,9 +419,11 @@ ul li {
     margin: 0 20px 0 10px;
 
 }
-
 .nav-item_1 {
-    margin-left: 55px;
+    padding: 0.5rem;
+}
+.collapse{
+    background-color: rgba(255,255,255,0.4)
 }
 .nav-left label {
     line-height: 1rem;
