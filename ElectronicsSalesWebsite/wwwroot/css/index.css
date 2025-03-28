@@ -2,19 +2,22 @@
 
 
 :root, [data-bs-theme=light] {
-    /*--bs-body-color: #000000;*/
-    --icon-color: #a173ea;
+    /*--bg-body-color: #000000;*/
+
     --bg-color: #F9F9F9;
     --bg-color-hover: rgba(27,89,248,.10);
-    --bs-color-active: rgba(27,89,248,.20);
-    --bs-secondary-bg: #fff;
+    --bg-color-active: rgba(27,89,248,.20);
+    --bg-secondary-color: #fff;
+    --bg-tertiary-color: #f5f5f5;
+
     --box-shadow: rgba(0, 0, 0, .08);
 }
 
 [data-bs-theme=dark] {
     --bg-color: #353535;
-    --bs-secondary-bg: #1e1e1e;
-    --bs-secondary-bg-hover: #0c001d;
+    --bg-secondary-color: #1e1e1e;
+    --bg-tertiary-color: #181818;
+
     --box-shadow: rgba(255, 255, 255, .08);
 }
 * {
@@ -35,7 +38,7 @@ body{
 
 
 header {
-    background-color: var(--bs-secondary-bg);
+    background-color: var(--bg-secondary-color);
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -48,7 +51,7 @@ header > div {
     text-align: start;
 }
 header a {
-    color: var(--bs-body-color);
+    color: var(--bg-body-color);
     text-decoration: none
 }
 /*---  LEFT ------*/
@@ -272,9 +275,9 @@ img#avatar {
 #sub-info {
     position: absolute;
     right: -10px;
-    left:0;
-    background-color: white;
-    border: solid 1px black;
+    left: 0;
+    background-color: var(--bg-secondary-color);
+    border: solid 1px var(--bs-body-color);
     border-radius: 0.2rem;
     z-index: 6;
     transform: scale(0.9);
@@ -320,7 +323,7 @@ img#avatar {
     height: 100%;
 }
 main {
-    background-color: var(--bs-secondary-bg);
+    background-color: var(--bg-secondary-color);
     border-radius: 0.4rem;
     box-shadow: 0 0 0.25rem .2rem var(--box-shadow);
     height: 100%;
@@ -328,12 +331,13 @@ main {
 /*------------------------  ------        NAV          -------  ---------------------------*/
 .navbar-nav .nav-link {
     border-radius: 0.5rem;
-    color: var(--bs-body-color);
+    color: var(--bg-body-color);
+    
 }
 .navbar-nav .nav-link.active {
     font-weight: bold;
-    color: var(--bs-body-color);
-    background-color: var(--bs-color-active);
+    color: var(--bg-body-color);
+    background-color: var(--bg-color-active);
     
 }
     .navbar-nav .nav-link.active:hover {
@@ -373,7 +377,7 @@ main {
 
 
 .row {
-    --bs-gutter-x: 0;
+    --bg-gutter-x: 0;
 }
 
 .hidden {
@@ -386,7 +390,7 @@ main {
     width: 300px;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
-    background-color: var(--bs-secondary-bg);
+    background-color: var(--bg-secondary-color);
     padding: 1rem;
     box-shadow: 3px 0rem 0.25rem 0px var(--box-shadow);
     border-radius: 0.4rem;
@@ -398,7 +402,7 @@ main {
 
 
 a:hover {
-    color: var(--bs-body-color);
+    color: var(--bg-body-color);
 }
 
 ul li {
@@ -414,7 +418,7 @@ ul li {
     padding: 0.5rem;
 }
 .collapse{
-    background-color: rgba(255,255,255,0.4)
+    background-color: var(--bg-tertiary-color);
 }
 .nav-left label {
     line-height: 1rem;
