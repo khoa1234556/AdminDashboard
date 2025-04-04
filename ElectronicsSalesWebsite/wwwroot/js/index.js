@@ -55,7 +55,6 @@ function ishidden(a,b) {
     if (b) {
         leftPane.classList.remove('trantision-x');
     }
-    console.log(localStorage.getItem('leftNavHidden'))
 }
 
 window.addEventListener('resize', function () {

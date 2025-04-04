@@ -2,7 +2,53 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="statistical" class="row g-3">
+    <div class="col-lg-6">
+        <div id="content_1" class="content overflow-auto">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle border right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Năm
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" id="btn_2021">2021</a></li>
+                    <li><a class="dropdown-item" id="btn_2022">2022</a></li>
+                    <li><a class="dropdown-item" id="btn_2023">2023</a></li>
+                </ul>
+            </div>
+            <div>
+                <canvas id="numberOfAuctions"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div id="content_2" class="content ">
+            <button id="btn_Load_warehouse" class="btn border right">Load</button>
+            <div>
+                <canvas id="warehouse"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div id="content_3" class="content">
+            <h6>Thống kê doanh thu</h6>
+            <div class="overflow-x-auto content" style="width:90%">
+                <div style="width:10000px">
+                    <canvas id="linechart" width="400" height="20"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
 </div>
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+<script src="~/js/chart.js"></script>
