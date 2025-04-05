@@ -15,7 +15,7 @@
 
 [data-bs-theme=dark] {
     --bg-color: #353535;
-    --bg-secondary-color: #1e1e1e;
+    --bg-secondary-color: #1b1b1b;
     --bg-tertiary-color: #181818;
 
     --box-shadow: rgba(255, 255, 255, .08);
@@ -322,12 +322,6 @@ img#avatar {
     padding-top: 5rem;
     min-height: 100%;
 }
-main {
-    background-color: var(--bg-secondary-color);
-    border-radius: 0.4rem;
-    box-shadow: 0 0 0.25rem .2rem var(--box-shadow);
-    height: 100%;
-}
 /*------------------------  ------        NAV          -------  ---------------------------*/
 .navbar-nav .nav-link {
     border-radius: 0.5rem;
@@ -382,12 +376,12 @@ main {
 
 .nav-left {
     height: calc(100vh - 90px);
-    float:left;
+    float: left;
     width: 300px;
     overflow-y: auto;
     background-color: var(--bg-secondary-color);
     padding: 1rem;
-    box-shadow: 3px 0rem 0.25rem 0px var(--box-shadow);
+    box-shadow: 0px 0.3rem 0.25rem 0px var(--box-shadow);
     border-radius: 0.4rem;
 }
 .trantision-x {
@@ -430,6 +424,7 @@ ul li {
     position: relative;
     box-shadow: 0 0 0.25rem .2rem var(--box-shadow);
     border-radius: 0.4rem;
+    background-color: var(--bg-secondary-color);
 }
 .dropdown-item{
     cursor: pointer;

@@ -10,9 +10,10 @@
                     Năm
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" id="btn_2021">2021</a></li>
-                    <li><a class="dropdown-item" id="btn_2022">2022</a></li>
-                    <li><a class="dropdown-item" id="btn_2023">2023</a></li>
+                    <li><a class="dropdown-item" id="btn1_2021">2021</a></li>
+                    <li><a class="dropdown-item" id="btn1_2022">2022</a></li>
+                    <li><a class="dropdown-item" id="btn1_2023">2023</a></li>
+                    <li><a class="dropdown-item" id="btn1_2024">2024</a></li>
                 </ul>
             </div>
             <div>
@@ -30,25 +31,42 @@
     </div>
     <div class="col">
         <div id="content_3" class="content">
-            <h6>Thống kê doanh thu</h6>
-            <div class="overflow-x-auto content" style="width:90%">
-                <div style="width:10000px">
-                    <canvas id="linechart" width="400" height="20"></canvas>
+            <div class="dropdown">
+                <button class="btn dropdown-toggle border right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Năm
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" id="btn2_2021">2021</a></li>
+                    <li><a class="dropdown-item" id="btn2_2022">2022</a></li>
+                    <li><a class="dropdown-item" id="btn2_2023">2023</a></li>
+                    <li><a class="dropdown-item" id="btn2_2024">2024</a></li>
+                </ul>
+            </div>
+            <h5 class="my-3 ps-3">Thống kê doanh thu</h5>
+            
+            <div class="overflow-x-auto content" style="width:100%">
+                <div id="autoHeightDiv" style="width:5000px">
+                    <canvas id="linechart" width="200" height="20"></canvas>
                 </div>
             </div>
         </div>
-    </div>
-    
-    
-    
+    </div> 
 </div>
-
-
-
-
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
 <script src="~/js/chart.js"></script>
+<script>
+    // fix giao diện không thay đổi chiều cao khi thay đổi khung hình
+    window.addEventListener('load', function() {
+        var autoHeightDiv = document.getElementById('autoHeightDiv');
+        var computedStyle = window.getComputedStyle(autoHeightDiv);
+        autoHeightDiv.style.height = computedStyle.height;
+    });
+</script>
+
+
+
+
+
+
+
